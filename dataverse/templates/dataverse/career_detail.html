@@ -1,0 +1,30 @@
+{% extends "datapro/base.html" %}
+
+{% block content %}
+
+
+
+<section class="about-content py-5">
+    <div class="container">
+        <h2 class="about-title">{{ career.title }}</h2>
+        <h4 class="task-title">Key Tasks</h4>
+            {% for detail in obj %}
+            <ul class="about-text fw-bold">
+                {% for item in detail.main_task %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+        <p class="about-text mt-2">In today’s interconnected ecosystems, the level of data we generate and encounter is <span class="dv-content">unprecedented</span>.</p>
+
+    </div>
+    <div class="text-center">
+        <a href="#" class="btn btn-about">Learn More</a>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,125 @@
+{% extends "datapro/base.html" %}
+
+{% block content %}
+
+<section class="hero-section w-100">
+<h1 class="display-1 hero-title">DATAVERSE</h1>
+    <p class="hero-lead">Discover &bull; Explore &bull; Analyse</p>
+</section>
+
+<section class="content-section lead">
+    <p><span class="dv-content">DATAVERSE</span> is your go-to platform for insightful articles on data analysis, 
+        in-depth explanations of data governance, and a comprehensive glossary to help you 
+        <span class="dv-content">navigate the world of data with confidence.</span> <br>Explore, learn, and make <span class="dv-content">data-driven decisions!</span></p>    
+</section>
+
+
+
+<section class="cards-section d-flex flex-column align-items-center justify-content-center text-center mt-0 pt-0 mb-4">        
+    <h2 class="section-title display-4 fw-bold mb-5 CardTitle">Our Topics</h2>
+    <div class="cards-container d-flex flex-wrap justify-content-center gap-4">
+        <div class="card p-4 text-center">
+            <div class="d-flex justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#5562EA">
+                    <path d="M120-120v-76l60-60v136h-60Zm165 0v-236l60-60v296h-60Zm165 0v-296l60 61v235h-60Zm165 0v-235l60-60v295h-60Zm165 0v-396l60-60v456h-60ZM120-356v-85l280-278 160 160 280-281v85L560-474 400-634 120-356Z"/>
+                </svg>
+            </div>
+            <h3 class="mt-3 TitleCard">Zoom</h3>
+            <p class="lead subtext-card">Read about the Latest Data analysis</p>
+            <a href="#" class="btn btn-about">Learn More</a>
+        </div>
+
+        <div class="card p-4 text-center">
+            <div class="d-flex justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#5562EA">
+                    <path d="M160-120v-60h480v60H160Zm222-212L160-554l70-72 224 222-72 72Zm254-254L414-810l72-70 222 222-72 72Zm202 426L302-696l42-42 536 536-42 42Z"/>
+                </svg>
+            </div>
+            <h3 class="mt-3 TitleCard">Governance</h3>
+            <p class="lead subtext-card">Learn Data Governance</p>
+            <a href="{% url 'governance' %}" class="btn btn-about">Learn More</a>
+
+        </div>
+
+        <div class="card p-4 text-center">
+            <div class="d-flex justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#5562EA">
+                    <path d="M140-120q-24 0-42-18t-18-42v-480q0-24 18-42t42-18h180v-100q0-24 18-42t42-18h200q24 0 42 18t18 42v100h180q24 0 42 18t18 42v480q0 24-18 42t-42 18H140Zm0-60h680v-480H140v480Zm240-540h200v-100H380v100ZM140-180v-480 480Z"/>
+                </svg>
+            </div>
+            <h3 class="mt-3 TitleCard">Careers</h3>
+            <p class="lead subtext-card">View Data Professions</p>
+            <a href="{% url 'career' %}" class="btn btn-about">Learn More</a>
+            
+        </div>
+
+        <div class="card p-4 text-center">
+            <div class="d-flex justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#5562EA">
+                    <path d="M560-574v-48q33-14 67.5-21t72.5-7q26 0 51 4t49 10v44q-24-9-48.5-13.5T700-610q-38 0-73 9.5T560-574Zm0 220v-49q33-13.5 67.5-20.25T700-430q26 0 51 4t49 10v44q-24-9-48.5-13.5T700-390q-38 0-73 9t-67 27Zm0-110v-48q33-14 67.5-21t72.5-7q26 0 51 4t49 10v44q-24-9-48.5-13.5T700-500q-38 0-73 9.5T560-464ZM248-300q53.57 0 104.28 12.5Q403-275 452-250v-427q-45-30-97.62-46.5Q301.76-740 248-740q-38 0-74.5 9.5T100-707v434q31-14 70.5-20.5T248-300Zm264 50q50-25 98-37.5T712-300q38 0 78.5 6t69.5 16v-429q-34-17-71.82-25-37.82-8-76.18-8-54 0-104.5 16.5T512-677v427Zm-30 90q-51-38-111-58.5T248-239q-36.54 0-71.77 9T106-208q-23.1 11-44.55-3Q40-225 40-251v-463q0-15 7-27.5T68-761q42-20 87.39-29.5 45.4-9.5 92.61-9.5 63 0 122.5 17T482-731q51-35 109.5-52T712-800q46.87 0 91.93 9.5Q849-781 891-761q14 7 21.5 19.5T920-714v463q0 27.89-22.5 42.45Q875-194 853-208q-34-14-69.23-22.5Q748.54-239 712-239q-63 0-121 21t-109 58ZM276-489Z"/>
+                </svg>
+            </div>
+            <h3 class="mt-3 TitleCard">Glossary</h3>
+            <p class="lead subtext-card">Study the concepts of Data</p>
+            <a href="#" class="btn btn-about">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="quote-section">
+    <div class="quote-content">
+        <blockquote class="blockquote">
+            <p class="mb-0 display-5 fw-bold quote-text">
+                "The goal is to turn data into information and information into insight"
+            </p>
+            <p class="author">— Carly Fiorina, former CEO of Hewlett Packard</p>
+        </blockquote>
+    </div>
+</section>
+
+<section class="articles-section">
+    <h2 class="articles-title display-4">Latest Articles</h2>
+    <ul class="articles-list">
+        {% for article in obj %}
+            {% if article.is_featured %}
+        <li class="article-item">
+            <div class="article-meta">Published: {{ article.published_date }} </div>
+            <div class="article-title"><a href="{% url 'article_detail' article.id %}">{{ article.title }} (Featured)</a></div>
+            <span class="article-category">{{ article.category }}</span>
+        </li>
+        {% else %}
+        <li class="article-item">
+            <div class="article-meta">Published: {{ article.published_date }} </div>
+            <div class="article-title"><a href="{% url 'article_detail' article.id %}">{{ article.title }} </a></div>
+            <span class="article-category">{{ article.category }}</span>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; First</a>
+                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+    
+            {% for num in page_obj.paginator.page_range %}
+                {% if num == page_obj.number %}
+                    <span class="current">{{ num }}</span>
+                {% else %}
+                    <a href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+        </span>
+    </div>
+</section>
+
+{% endblock %}
+</body>
+</html>

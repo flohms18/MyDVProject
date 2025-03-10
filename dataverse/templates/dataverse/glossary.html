@@ -1,0 +1,32 @@
+{% extends "datapro/base.html" %}
+
+{% block content %}
+
+<div class="container text-center py-4">
+    <h1 class="mb-4">Glossary</h1>
+
+    <!-- Alphabet Navigation -->
+    <div class="alphabet-nav d-flex flex-wrap justify-content-center gap-2 mb-4">
+        {% for letter in glossary_dict.keys %}
+            <a href="#{{ letter }}" class="btn">{{ letter }}</a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container">
+    {% for letter, terms in glossary_dict.items %}
+        <h2 id="{{ letter }}" class="mt-4">{{ letter }}</h2>
+        <div class="row g-3">
+            {% for term in terms %}
+                <div class="col-md-4">
+                    <div class="glossary-item">
+                        <strong>{{ term.term }}</strong><br>
+                        <span>{{ term.definition }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
