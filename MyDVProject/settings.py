@@ -121,9 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATICFILES_DIRS = [
-    BASE_DIR / "dataverse/static",  # Path to the 'dataverse/static' directory
-]
+
 
 STATIC_URL = 'static/'
 STATIC_ROOT = '/usr/local/lsws/Example/html/MyDVProject/dataverse/static'
