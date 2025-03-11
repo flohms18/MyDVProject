@@ -11,12 +11,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import environ # type: ignore
+import environ
 import os
 
-env = environ.Env()
-environ.Env.read_env()
+env_file = os.getenv('DJANGO_ENV_FILE', '.env')
 
+env = environ.Env()
+environ.Env.read_env(env_file)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY', 'fallback-secret-key')
+SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = ['*']
 
@@ -89,8 +90,8 @@ DATABASES = {
         'NAME': env('DB_NAME'),  # Your database name
         'USER': env('DB_USER'),  # Your database username
         'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST'),  # MySQL server host, can also be an IP address or domain
-        'PORT': env('DB_PORT'),  # MySQL default port (3306)
+        'HOST': env('DB_HOST',default='localhost'),  # MySQL server host, can also be an IP address or domain
+        'PORT': env('DB_PORT', default='3306'),  # MySQL default port (3306)
     }
 }
 
