@@ -14,6 +14,8 @@ from pathlib import Path
 import environ
 import os
 
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,11 +86,11 @@ WSGI_APPLICATION = 'MyDVProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Use MySQL database engine
-        'NAME': os.getenv('DB_NAME'),  # Your database name
-        'USER': os.getenv('DB_USER'),  # Your database username
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),  # MySQL server host, can also be an IP address or domain
-        'PORT': os.getenv('DB_PORT'),  # MySQL default port (3306)
+        'NAME': env('DB_NAME'),  # Your database name
+        'USER': env('DB_USER'),  # Your database username
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),  # MySQL server host, can also be an IP address or domain
+        'PORT': env('DB_PORT'),  # MySQL default port (3306)
     }
 }
 
