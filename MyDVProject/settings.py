@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'dataversedb',                # Database name
         'USER': 'mydataverseuser',             # MySQL username
         'PASSWORD': 'mondialos1492',           # MySQL password
-        'HOST': '82.29.173.155',                   # MySQL host (use IP if hosted remotely)
+        'HOST': 'localhost',                   # MySQL host (use IP if hosted remotely)
         'PORT': '3306',                        # MySQL port (default: 3306)
     }
 }
