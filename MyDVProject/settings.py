@@ -123,9 +123,9 @@ USE_TZ = True
 
 
 
-STATIC_URL = 'static/'
-STATIC_ROOT = '/usr/local/lsws/Example/html/MyDVProject/static'
 
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'productionfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
