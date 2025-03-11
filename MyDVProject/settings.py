@@ -11,13 +11,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import environ
 import os
 
-env_file = os.getenv('DJANGO_ENV_FILE', '.env')
-
+import environ
 env = environ.Env()
-environ.Env.read_env(env_file)
+environ.Env.read_env()
+environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,8 +29,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','localhost']
-
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost'])
 
 # Application definition
 
@@ -86,14 +84,16 @@ WSGI_APPLICATION = 'MyDVProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Use MySQL database engine
-        'NAME': env('DB_NAME'),  # Your database name
-        'USER': env('DB_USER'),  # Your database username
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
         'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST',default='localhost'),  # MySQL server host, can also be an IP address or domain
-        'PORT': env('DB_PORT', default='3306'),  # MySQL default port (3306)
+        'HOST': env('DB_HOST', default='localhost'),
+        'PORT': env('DB_PORT', default='3306'),
+        
     }
 }
+
 
 
 
