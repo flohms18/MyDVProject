@@ -22,5 +22,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', include('dataverse.urls')),
-    path('admin/', admin.site.urls),
+    path('dv-admin/', admin.site.urls),
 ]
