@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['dataverse-ft.com','www.dataverse-ft.com']
 
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'MyDVProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Use MySQL database engine
-        'NAME': 'dataversedb',  # Your database name
+        'NAME': os.getenv('DB_NAME'),  # Your database name
         'USER': 'mydataverseuser',  # Your database username
         'PASSWORD': 'mondialos1492',  # Your database password
         'HOST': 'localhost',  # MySQL server host, can also be an IP address or domain
