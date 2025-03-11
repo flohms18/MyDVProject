@@ -83,12 +83,10 @@ WSGI_APPLICATION = 'MyDVProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Use MySQL backend
-        'NAME': 'dataversedb',                # Database name
-        'USER': 'mydataverseuser',             # MySQL username
-        'PASSWORD': 'mondialos1492',           # MySQL password
-        'HOST': 'localhost',                   # MySQL host (use IP if hosted remotely)
-        'PORT': '3306',                        # MySQL port (default: 3306)
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/etc/mysql/my.cnf',
+        },
     }
 }
 
