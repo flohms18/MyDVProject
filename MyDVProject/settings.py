@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4-qs&t&2xyds6iz*&w0*z&z&lqi9v2=vp=1qx^^e1k!64f&@t2'
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-secret-key')
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ['dataverse-ft.com','www.dataverse-ft.com']
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -91,8 +91,6 @@ DATABASES = {
         'PORT': '3306',  # MySQL default port (3306)
     }
 }
-
-
 
 
 # Password validation
