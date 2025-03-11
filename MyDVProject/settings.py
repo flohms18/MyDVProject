@@ -12,33 +12,23 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-import environ
-
-
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
-
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'django-insecure-4-qs&t&2xyds6iz*&w0*z&z&lqi9v2=vp=1qx^^e1k!64f&@t2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
+ALLOWED_HOSTS = ['*']
 
-
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
 
 # Application definition
 
@@ -93,12 +83,12 @@ WSGI_APPLICATION = 'MyDVProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST', default='localhost'),
-        'PORT': env('DB_PORT', default='3306'),
+        'ENGINE': 'django.db.backends.mysql',  # Use MySQL database engine
+        'NAME': 'dataversedb',  # Your database name
+        'USER': 'mydataverseuser',  # Your database username
+        'PASSWORD': 'mondialos1492',  # Your database password
+        'HOST': 'localhost',  # MySQL server host, can also be an IP address or domain
+        'PORT': '3306',  # MySQL default port (3306)
     }
 }
 
