@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["dataverse-ft.com",'www.dataverse-ft.com']
 
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+DEBUG = os.getenv('DEBUG', 'True') == 'False'
 SECRET_KEY = os.getenv('SECRET_KEY')
 DB_NAME = os.getenv('DB_NAME')
 DB_USER = os.getenv('DB_USER')
