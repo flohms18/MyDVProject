@@ -405,6 +405,12 @@ body {
     font-size: 1.75rem !important
 }
 
+.img-governance {
+    max-width: 800px; /* Limits the image width to match the max width of text */
+    width: 100%; /* Ensures responsiveness by scaling down the image */
+    height: auto; /* Keeps the aspect ratio intact */
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
