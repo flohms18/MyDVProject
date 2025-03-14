@@ -20,7 +20,7 @@ class GlossaryTerm(models.Model):
     definition = models.TextField()
 
     def __str__(self):
-        return self.name
+        return self.term
 
 
 class Article(models.Model):
