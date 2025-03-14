@@ -535,12 +535,22 @@ h2 {
 
 }
 .glossary-item {
+    color: #232d3f;
+    font-family: 'Poppins',sans-serif;
     padding: 15px;
     background: #f4f4f4;
     border-radius: 8px;
 }
 
+.letter-item {
+    color: #232d3f;
+    font-family: 'Poppins',sans-serif;
+
+}
+
 .article-meta {
+    color: #232d3f;
+    font-family: 'Poppins',sans-serif;
     display: flex;
     justify-content: center;
     gap: 15px; /* Adjust spacing between items */

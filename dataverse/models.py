@@ -6,6 +6,9 @@ class DataCareer(models.Model):
     title = models.CharField(max_length=100, unique=True)
     main_task = models.JSONField(default=list)
 
+    def __str__(self):
+        return self.title
+
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
@@ -16,6 +19,9 @@ class GlossaryTerm(models.Model):
     term = models.CharField(max_length=100, unique=True)
     definition = models.TextField()
 
+    def __str__(self):
+        return self.name
+
 
 class Article(models.Model):
     title = models.CharField(max_length=255)
@@ -24,4 +30,7 @@ class Article(models.Model):
     is_featured = models.BooleanField(default=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="articles")
     published_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
     

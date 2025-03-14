@@ -15,7 +15,7 @@
 
 <div class="container">
     {% for letter, terms in glossary_dict.items %}
-        <h2 id="{{ letter }}" class="mt-4">{{ letter }}</h2>
+        <h2 id="{{ letter }}" class="letter-item mt-4">{{ letter }}</h2>
         <div class="row g-3">
             {% for term in terms %}
                 <div class="col-md-4">
