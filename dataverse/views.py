@@ -24,7 +24,7 @@ def glossary(request):
         'glossary_dict': glossary_dict})
 
 def index(request):
-    obj = Article.objects.all().order_by('-is_featured')
+    obj = Article.objects.all().order_by('-is_featured', '-published_date')    
     paginator = Paginator(obj, 1)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
