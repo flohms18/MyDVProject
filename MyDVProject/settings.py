@@ -183,5 +183,16 @@ LOGGING = {
     },
 }
 
+TINYMCE_DEFAULT_CONFIG = {
+    "height": 500,
+    "menubar": True,
+    "plugins": "code",
+    "toolbar": "undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code",
+    "valid_elements": "*[*]",  # Allow all HTML elements and attributes
+    "valid_styles": "*",  # Allow all styles
+    "extended_valid_elements": "script[*],style[*]",  # Allow script and style tags
+    "cleanup": False,  # Disable cleanup to prevent HTML stripping
+    "verify_html": False,  # Disable verification to prevent stripping HTML
+}
 
 
