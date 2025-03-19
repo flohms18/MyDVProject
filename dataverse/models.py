@@ -5,6 +5,7 @@ from tinymce.models import HTMLField
 class DataRole(models.Model):
     title = models.CharField(max_length=100, unique=True)
     main_task = models.JSONField(default=list)
+    description = models.TextField(default="NODESC")
 
     def __str__(self):
         return self.title

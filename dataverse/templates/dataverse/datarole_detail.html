@@ -7,14 +7,12 @@
 <section class="about-content py-5">
     <div class="container">
         <h2 class="about-title">{{ dr.title }}</h2>
-            {% for detail in obj %}
             <ul class="about-text fw-bold">
-                {% for item in detail.main_task %}
+                {% for item in dr.main_task %}
                     <li>{{ item }}</li>
                 {% endfor %}
             </ul>
-        {% endfor %}
-        <p class="about-text mt-2">In today’s interconnected ecosystems, the level of data we generate and encounter is <span class="dv-content">unprecedented</span>.</p>
+            <p class="about-text mt-2">{{ dr.description }}</p>
 
     </div>
     <div class="text-center">

@@ -41,8 +41,7 @@ def datarole_detail(request, data_role_id):
     dr = get_object_or_404(DataRole, id=data_role_id)    
     obj = DataRole.objects.all()
     return render(request, "dataverse/datarole_detail.html", {
-        'dr': dr, 
-        'obj': obj
+        'dr': dr
 })
 
 def article_detail(request, article_id):
