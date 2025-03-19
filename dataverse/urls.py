@@ -18,17 +18,17 @@ from django.urls import path
 from django.urls import path, include
 
 from . import views
-from dataverse.views import career_detail
+from dataverse.views import datarole_detail
 from dataverse.views import article_detail
 
 
 urlpatterns = [
     path("", views.index, name="index"),
     path("about", views.about, name="about"),
-    path("career", views.career, name="career"),
+    path("datarole", views.datarole, name="datarole"),
     path("glossary", views.glossary, name="glossary"),
     path("governance", views.governance, name="governance"),
-    path("career/<int:career_id>/", career_detail, name="career_detail"),
+    path("datarole/<int:data_role_id>/", datarole_detail, name="datarole_detail"),
     path("article/<int:article_id>/", article_detail, name="article_detail"),
     path("tinymce/", include("tinymce.urls")), 
 

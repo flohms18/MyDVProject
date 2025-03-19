@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 
-from .models import DataCareer, Article, GlossaryTerm
+from .models import DataRole, Article, GlossaryTerm
 # Create your views here.
 
-def career(request):
-    queryset = DataCareer.objects.all()  
-    return render(request, "dataverse/career.html",{'queryset': queryset})
+def datarole(request):
+    queryset = DataRole.objects.all()  
+    return render(request, "dataverse/datarole.html",{'queryset': queryset})
 
 def about(request):
     return render(request,'dataverse/about.html')
@@ -37,11 +37,11 @@ def index(request):
 def governance(request):
     return render(request,'dataverse/governance.html')
 
-def career_detail(request, career_id):
-    career = get_object_or_404(DataCareer, id=career_id)    
-    obj = DataCareer.objects.all()
-    return render(request, "dataverse/career_detail.html", {
-        'career': career, 
+def datarole_detail(request, data_role_id):
+    dr = get_object_or_404(DataRole, id=data_role_id)    
+    obj = DataRole.objects.all()
+    return render(request, "dataverse/datarole_detail.html", {
+        'dr': dr, 
         'obj': obj
 })
 

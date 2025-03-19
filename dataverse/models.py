@@ -2,7 +2,7 @@ from django.db import models
 from tinymce.models import HTMLField
 # Create your models here.
 
-class DataCareer(models.Model):
+class DataRole(models.Model):
     title = models.CharField(max_length=100, unique=True)
     main_task = models.JSONField(default=list)
 

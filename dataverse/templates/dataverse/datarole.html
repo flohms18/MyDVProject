@@ -3,16 +3,16 @@
 {% block content %}
 
 <section class="cards-section d-flex flex-column align-items-center justify-content-center text-center mt-0 pt-0 mb-4">        
-    <h2 class="section-title fw-bold mb-5 CardTitle mt-5 about-title">Data Careers</h2>
+    <h2 class="section-title fw-bold mb-5 CardTitle mt-5 about-title">Data Roles</h2>
     <div class="cards-container d-flex flex-wrap justify-content-center gap-4">
-        {% for career in queryset %}
+        {% for datarole in queryset %}
         <div class="card p-4 text-center">
             <div class="d-flex justify-content-center">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#5562EA"><path d="M480-481q-66 0-108-42t-42-108q0-66 42-108t108-42q66 0 108 42t42 108q0 66-42 108t-108 42ZM160-160v-94q0-38 19-65t49-41q67-30 128.5-45T480-420q62 0 123 15.5t127.92 44.69q31.3 14.13 50.19 40.97Q800-292 800-254v94H160Zm60-60h520v-34q0-16-9.5-30.5T707-306q-64-31-117-42.5T480-360q-57 0-111 11.5T252-306q-14 7-23 21.5t-9 30.5v34Zm260-321q39 0 64.5-25.5T570-631q0-39-25.5-64.5T480-721q-39 0-64.5 25.5T390-631q0 39 25.5 64.5T480-541Zm0-90Zm0 411Z"/></svg>
             </div>
-            <h3 class="mt-3 TitleCard">{{ career.title }}</h3>
+            <h3 class="mt-3 TitleCard">{{ datarole.title }}</h3>
             <p class="lead subtext-card">Read about the Latest Data analysis</p>
-            <a href="{% url 'career_detail' career.id %}" class="btn btn-about">Learn More</a>
+            <a href="{% url 'datarole_detail' datarole.id %}" class="btn btn-about">Learn More</a>
         </div>
         {% endfor %}
     </div>
