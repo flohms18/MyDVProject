@@ -1,18 +1,22 @@
 from django.db import models
 from tinymce.models import HTMLField
-from django.urls import reverse
+from django.utils.text import slugify 
 # Create your models here.
 
 class DataRole(models.Model):
     title = models.CharField(max_length=100, unique=True)
     main_task = models.JSONField(default=list)
     description = models.TextField(default="NODESC")
+    slug = models.SlugField(unique=True, blank=True)  # Add the slug field
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)  # Automatically generate slug from the title
+        super().save(*args, **kwargs)
     
     def __str__(self):
         return self.title
     
-    def get_absolute_url(self):
-        return reverse("datarole_detail", kwargs={"slug": self.slug})
 
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -35,11 +39,16 @@ class Article(models.Model):
     is_featured = models.BooleanField(default=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="articles")
     published_date = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(unique=True, blank=True)  # Add the slug field
+
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)  # Automatically generate slug from the name
+        super().save(*args, **kwargs)
     
 
     def __str__(self):
         return self.title
     
-    def get_absolute_url(self):
-        return reverse("article_detail", kwargs={"slug": self.slug})
     

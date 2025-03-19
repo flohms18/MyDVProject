@@ -12,7 +12,7 @@
             </div>
             <h3 class="mt-3 TitleCard">{{ datarole.title }}</h3>
             <p class="lead subtext-card">Read about the Latest Data analysis</p>
-            <a href="{% url 'datarole_detail' datarole.id %}" class="btn btn-about">Learn More</a>
+            <a href="{% url 'datarole_detail' datarole.slug %}" class="btn btn-about">Learn More</a>
         </div>
         {% endfor %}
     </div>

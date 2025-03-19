@@ -28,8 +28,8 @@ urlpatterns = [
     path("datarole", views.datarole, name="datarole"),
     path("glossary", views.glossary, name="glossary"),
     path("governance", views.governance, name="governance"),
-    path("datarole/<int:data_role_id>/", datarole_detail, name="datarole_detail"),
-    path("article/<int:article_id>/", article_detail, name="article_detail"),
+    path("datarole/<slug:slug>/", datarole_detail, name="datarole_detail"),
+    path("article/<slug:slug>/", article_detail, name="article_detail"),
     path("tinymce/", include("tinymce.urls")), 
 
     

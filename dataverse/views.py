@@ -37,15 +37,15 @@ def index(request):
 def governance(request):
     return render(request,'dataverse/governance.html')
 
-def datarole_detail(request, data_role_id):
-    dr = get_object_or_404(DataRole, id=data_role_id)    
+def datarole_detail(request, slug):
+    dr = get_object_or_404(DataRole, slug=slug)    
     obj = DataRole.objects.all()
     return render(request, "dataverse/datarole_detail.html", {
         'dr': dr
 })
 
-def article_detail(request, article_id):
-    article = get_object_or_404(Article, id=article_id)    
+def article_detail(request, slug):
+    article = get_object_or_404(Article, slug=slug)    
     return render(request, "dataverse/article_detail.html", {
         'article': article
 })
