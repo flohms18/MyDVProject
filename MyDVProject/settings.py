@@ -145,45 +145,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {message}',
-            'style': '{',
-        },
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'file': {
-            'level': 'ERROR',  # Only log errors
-            'class': 'logging.FileHandler',
-            'filename': 'django_error.log',  # Log errors here
-            'formatter': 'verbose',
-        },
-        'console': {
-            'level': 'CRITICAL',  # Only show critical errors in console
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],  # No console logging, only file
-            'level': 'ERROR',
-            'propagate': True,
-        },
-        'django.request': {  # Log only 500 errors and above
-            'handlers': ['file'],
-            'level': 'ERROR',
-            'propagate': False,
-        },
-    },
-}
+
+
 
 TINYMCE_DEFAULT_CONFIG = {
     "height": 500,
