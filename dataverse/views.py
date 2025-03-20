@@ -25,7 +25,7 @@ def glossary(request):
 
 def index(request):
     obj = Article.objects.all().order_by('-is_featured', '-published_date')    
-    paginator = Paginator(obj, 1)
+    paginator = Paginator(obj, 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, "dataverse/index.html", {
