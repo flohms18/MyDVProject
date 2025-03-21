@@ -7,6 +7,9 @@
 <section class="about-content py-5">
     <div class="container">
         <h2 class="about-title">{{ dr.title }}</h2>
+        <div class="article-meta">
+            <span class="article-category fst-italic">{{ datarole.category_role }}</span>
+        </div>
             <ul class="about-text fw-bold">
                 {% for item in dr.main_task %}
                     <li>{{ item }}</li>
