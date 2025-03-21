@@ -7,6 +7,7 @@ class DataRole(models.Model):
     title = models.CharField(max_length=100, unique=True)
     main_task = models.JSONField(default=list)
     description = models.TextField(default="NODESC")
+    category_role = models.TextField(default="NODESC")
     slug = models.SlugField(unique=True, blank=True)  # Add the slug field
 
     def save(self, *args, **kwargs):
