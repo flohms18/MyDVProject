@@ -107,8 +107,16 @@ body {
 .TitleCard {
     font-family: 'Poppins',sans-serif;
     color: #232d3f;
-    font-size: 25px;
+    font-size: 20px;
 }
+
+.TitleCard_DR {
+    font-family: 'Poppins',sans-serif;
+    color: #232d3f;
+    font-size: 15px;
+}
+
+
 
 .CardTitle {
     color: #232d3f;
@@ -123,6 +131,13 @@ body {
     font-size: 1.025rem;
 }
 
+.subtext-card_DR {
+    font-family: 'Poppins',sans-serif;
+    color: #232d3f;
+    font-size: 0.90rem;
+}
+
+
 .quote-section {
     position: relative;
     width: 100%;
@@ -133,8 +148,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 25%;
+    padding-top: 15%;
 }
+
+
 
 .quote-content {
     font-family: 'Poppins',sans-serif;
@@ -145,6 +162,7 @@ body {
     padding: 0 15px; 
     max-width: 80%;
     z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 
