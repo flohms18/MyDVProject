@@ -107,8 +107,16 @@ body {
 .TitleCard {
     font-family: 'Poppins',sans-serif;
     color: #232d3f;
-    font-size: 25px;
+    font-size: 20px;
 }
+
+.TitleCard_DR {
+    font-family: 'Poppins',sans-serif;
+    color: #232d3f;
+    font-size: 15px;
+}
+
+
 
 .CardTitle {
     color: #232d3f;
@@ -120,7 +128,15 @@ body {
 .subtext-card {
     font-family: 'Poppins',sans-serif;
     color: #232d3f;
+    font-size: 1.025rem;
 }
+
+.subtext-card_DR {
+    font-family: 'Poppins',sans-serif;
+    color: #232d3f;
+    font-size: 0.90rem;
+}
+
 
 .quote-section {
     position: relative;
@@ -132,8 +148,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 25%;
+    padding-top: 15%;
 }
+
+
 
 .quote-content {
     font-family: 'Poppins',sans-serif;
@@ -144,6 +162,7 @@ body {
     padding: 0 15px; 
     max-width: 80%;
     z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 
@@ -535,12 +554,22 @@ h2 {
 
 }
 .glossary-item {
+    color: #232d3f;
+    font-family: 'Poppins',sans-serif;
     padding: 15px;
     background: #f4f4f4;
     border-radius: 8px;
 }
 
+.letter-item {
+    color: #232d3f;
+    font-family: 'Poppins',sans-serif;
+
+}
+
 .article-meta {
+    color: #232d3f;
+    font-family: 'Poppins',sans-serif;
     display: flex;
     justify-content: center;
     gap: 15px; /* Adjust spacing between items */
