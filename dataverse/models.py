@@ -44,7 +44,7 @@ class Article(models.Model):
     tool = models.CharField(max_length=255,default="one")
     content = HTMLField()
     is_featured = models.BooleanField(default=False)
-    insight = models.ForeignKey(Insight, on_delete=models.CASCADE, related_name="articles", blank=True,null=True,default=1)
+    insight = models.ForeignKey(Insight, on_delete=models.CASCADE, related_name="articles", blank=True,null=True,default=None)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="articles")
     published_date = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(unique=True, blank=True,null=True)  # Add the slug field
