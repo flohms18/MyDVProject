@@ -34,11 +34,7 @@ class GlossaryTerm(models.Model):
     def __str__(self):
         return self.term
 
-class Insight(models.Model):
-    name = models.CharField(max_length=100, unique=True,blank=True,null=True)
 
-    def __str__(self):
-        return self.name
 
 class Article(models.Model):
     title = models.CharField(max_length=255)
