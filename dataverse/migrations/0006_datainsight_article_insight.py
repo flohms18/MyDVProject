@@ -21,6 +21,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='article',
             name='insight',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='articles', to='dataverse.datainsight'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, null=True,
+            blank=True, related_name='articles', to='dataverse.datainsight'),
         ),
     ]
