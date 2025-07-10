@@ -25,7 +25,7 @@ def glossary(request):
 
 def index(request):
     obj = Article.objects.all().order_by('-is_featured', '-published_date')    
-    paginator = Paginator(obj, 10)
+    paginator = Paginator(obj, 5)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, "dataverse/index.html", {
@@ -49,3 +49,23 @@ def article_detail(request, slug):
     return render(request, "dataverse/article_detail.html", {
         'article': article
 })
+
+def data_mindset(request):
+    obj = Article.objects.filter(insight__name="Data Mindset").order_by('-published_date')    
+    paginator = Paginator(obj, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, "dataverse/data_mindset.html", {
+        'obj': obj,
+        'page_obj' : page_obj
+    })
+
+def analytic_edge(request):
+    obj = Article.objects.filter(insight__name="Analytic Edge").order_by('-published_date')
+    paginator = Paginator(obj, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, "dataverse/analytic_edge.html", {
+        'obj': obj,
+        'page_obj' : page_obj,
+    })

@@ -239,6 +239,8 @@ body {
     border-radius: 20px;
 }
 
+
+
 /* Footer Styling */
 .footer-section {
     background-color: #232d3f;
@@ -574,6 +576,30 @@ h2 {
     justify-content: center;
     gap: 15px; /* Adjust spacing between items */
     margin-bottom: 15px;
+}
+
+.started-button-left {
+    color: #f8f9fa;
+    font-family: 'Poppins',sans-serif;
+    background-color: #6A4267;
+}
+
+.started-button-left:hover {
+    color: #5562EA;
+}
+
+.started-button-right:hover {
+    color: #5562EA;
+}
+
+.started-button-right {
+    color: #f8f9fa;
+    font-family: 'Poppins',sans-serif;
+    background-color: #2C2750;
+}
+
+.started-section {
+    background-color: #f8f9fa;
 }
 
 
