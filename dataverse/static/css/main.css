@@ -6,7 +6,7 @@ body {
 
 .HeaderBanner {
     font-family: 'Poppins',sans-serif;
-    background-color: #232d3f;
+    background-color: #1E2735;
 }
 
 .brand-name {
@@ -32,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #232d3f;
+    background-color: #1E2735;
 
 }
 
@@ -106,20 +106,20 @@ body {
 
 .TitleCard {
     font-family: 'Poppins',sans-serif;
-    color: #232d3f;
+    color: #1E2735;
     font-size: 20px;
 }
 
 .TitleCard_DR {
     font-family: 'Poppins',sans-serif;
-    color: #232d3f;
+    color: #1E2735;
     font-size: 15px;
 }
 
 
 
 .CardTitle {
-    color: #232d3f;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
 
 }
@@ -127,13 +127,13 @@ body {
 
 .subtext-card {
     font-family: 'Poppins',sans-serif;
-    color: #232d3f;
+    color: #1E2735;
     font-size: 1.025rem;
 }
 
 .subtext-card_DR {
     font-family: 'Poppins',sans-serif;
-    color: #232d3f;
+    color: #1E2735;
     font-size: 0.90rem;
 }
 
@@ -189,7 +189,7 @@ body {
     font-weight: bold;
     margin-bottom: 30px;
     font-family: 'Poppins',sans-serif;
-    color: #232d3f;
+    color: #1E2735;
 
 }
 
@@ -234,7 +234,7 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
     background-color: #f0f0f0;
-    color: #232d3f;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
     border-radius: 20px;
 }
@@ -243,7 +243,7 @@ body {
 
 /* Footer Styling */
 .footer-section {
-    background-color: #232d3f;
+    background-color: #1E2735;
     color: #ffffff;
     padding: 40px 0;
     text-align: center;
@@ -397,7 +397,7 @@ body {
 
 /* Centered Title */
 .about-title {
-    color: #232d3f;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
@@ -407,7 +407,7 @@ body {
 
 /* About Text */
 .about-text {
-    color: #232d3f;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -416,7 +416,7 @@ body {
 }
 
 .about-subtitle {
-    color: #232d3f;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
     font-size: 2.1rem;
     line-height: 1.6;
@@ -477,7 +477,7 @@ h2 {
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
-  color: #232d3f;
+  color: #1E2735;
 }
 
 .pagination {
@@ -510,7 +510,7 @@ h2 {
 .step-links a {
     font-family: 'Poppins',sans-serif;
     background-color: #f1f1f1;
-    color: #232d3f;
+    color: #1E2735;
 }
 
 .step-links a:hover {
@@ -545,7 +545,7 @@ h2 {
     padding: 10px 15px;
     font-family: 'Poppins',sans-serif;
     background-color: #f1f1f1;
-    color: #232d3f;
+    color: #1E2735;
     font-weight: 600;
     border-radius: 5px;
 }
@@ -556,7 +556,7 @@ h2 {
 
 }
 .glossary-item {
-    color: #232d3f;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
     padding: 15px;
     background: #f4f4f4;
@@ -564,13 +564,13 @@ h2 {
 }
 
 .letter-item {
-    color: #232d3f;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
 
 }
 
 .article-meta {
-    color: #232d3f;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
     display: flex;
     justify-content: center;
