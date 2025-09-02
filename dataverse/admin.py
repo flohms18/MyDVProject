@@ -4,7 +4,7 @@ from django.db import models
 
 # Register your models here.
 
-from .models import DataRole, Category, Article, GlossaryTerm, Insight
+from .models import DataRole, Category, Article, GlossaryTerm
 
 class ArticleAdmin(admin.ModelAdmin):
     formfield_overrides = {
@@ -15,4 +15,3 @@ admin.site.register(DataRole)
 admin.site.register(Category)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(GlossaryTerm)
-admin.site.register(Insight)
