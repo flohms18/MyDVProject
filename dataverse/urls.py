@@ -30,9 +30,7 @@ urlpatterns = [
     path("governance", views.governance, name="governance"),
     path("datarole/<slug:slug>/", datarole_detail, name="datarole_detail"),
     path("article/<slug:slug>/", article_detail, name="article_detail"),
-    path("tinymce/", include("tinymce.urls")),
-    path("analytic-edge",views.analytic_edge, name="analytic-edge"),
-    path("data-mindset",views.data_mindset,name="data-mindset")
+    path("tinymce/", include("tinymce.urls"))
 
 
     
