@@ -20,34 +20,58 @@ body {
     font-weight: bold;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .home-link {
     color: #5562ea;
     font-weight: bold;
 }
 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #5562ea;
+    font-weight: bold;
+}
+.navbar-light .navbar-nav .home-link:hover {
+    color: #5562ea;
+    font-weight: bold;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #5562ea;
+    font-weight: normal;
+}
+
+.home-link:hover {
+    text-decoration: none;
+    color: #5562ea;
+    font-weight: normal;
+}
+
 .hero-section {
-    height: 60vh;
+    margin-top: 50px;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #1E2735;
+    background-color: #f8f9fa;
 
 }
 
 .hero-title {
     color: #5562ea;
     font-family: 'Poppins',sans-serif;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 10rem;
 }
 
 .hero-lead {
-    color: #f8f9fa;
+    color: #1E2735;
     font-family: 'Poppins',sans-serif;
     font-weight: bold;
-    font-style: italic;
-    margin-top: -10px;
+    margin-top: -30px;
+    letter-spacing: 10px;
+    font-size: 2rem;
 }
 
 
