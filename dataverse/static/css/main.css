@@ -93,6 +93,13 @@ body {
     font-weight: bold;
 }
 
+.dv-content-intro {
+    font-family: 'Poppins',sans-serif;
+    color: #1E2735;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
 .cards-section {
     width: 100%;
     padding: 60px 20px;
