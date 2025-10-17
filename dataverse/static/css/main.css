@@ -74,6 +74,14 @@ body {
     font-size: 2rem;
 }
 
+.hero-slogan {
+    color: #1E2735;
+    font-family: 'Poppins',sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: -20px;
+}
+
 
 .content-section {
     font-family: 'Poppins',sans-serif;
@@ -121,6 +129,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
 }
 .card img {
     width: 80px;
@@ -206,6 +215,7 @@ body {
 
 .quote-text {
     font-family: 'Poppins',sans-serif;
+    font-weight: 600;
 
 }
 
