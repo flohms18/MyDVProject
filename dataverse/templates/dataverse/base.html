@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light HeaderBanner w-100">
             <div class="container-fluid">
-                <h2 class="brand-name"><a class="home-link" href="{% url 'index' %}">DV</a></h2>                
+                <h2 class="brand-name"><a class="home-link" href="{% url 'index' %}">DATAVERSE</a></h2>                
                 <button class="navbar-toggler james" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">                            <i>{% bs_icon 'list' color='#5562EA' size='1.5em'%}</i>                        
                     </span>
@@ -25,8 +25,6 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">ABOUT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'datarole' %}">DATA ROLES</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'governance' %}">DATA GOVERNANCE</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'glossary'%}">GLOSSARY</a></li>
                     </ul>
                 </div>
@@ -52,15 +50,13 @@
                     <ul>
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'governance' %}">Data Governance</a></li>
-                        <li><a href="{% url 'datarole' %}">Data Roles</a></li>
                         <li><a href="{% url 'glossary'%}">Glossary</a></li>
 
                     </ul>
                 </div>
     
                 <div class="col-md-4 footer-social">
-                    <h4 class="footer-subtitle fw-bold">Follow Me</h4>
+                    <h4 class="footer-subtitle fw-bold">Add me on Linkedin!</h4>
                     <div class="social-icons mt-4">
                         <a href="https://www.linkedin.com/in/florent-trouillet/" target="_blank">
                             <i>{% bs_icon 'linkedin' color='#5562EA' size='1.5em'%}</i>                        
