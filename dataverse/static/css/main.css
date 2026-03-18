@@ -643,5 +643,23 @@ h2 {
     background-color: #f8f9fa;
 }
 
+.nav-link-category {
+    width: 20rem;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--dark-color);
+}
+
+.nav-link-category:hover {
+    color: var(--violet-color);
+    transition: 0.5s ease;
+}
+
+.navbar-category {
+    background-color: #fff;
+    color: var(--dark-color);
+    border-bottom:1px solid #e0e0e0;
+}
+
 
 
