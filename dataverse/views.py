@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 
-from .models import DataRole, Article, GlossaryTerm
+from .models import DataRole, Article, GlossaryTerm, Category
 # Create your views here.
 
 def datarole(request):
@@ -31,6 +31,20 @@ def index(request):
     return render(request, "dataverse/index.html", {
         'obj': obj,
         'page_obj' : page_obj,
+    })
+
+
+def category_detail(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    articles_list = Article.objects.filter(category=category).order_by('-published_at')
+    
+    paginator = Paginator(articles_list, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    
+    return render(request, "category_detail.html", {
+        'category': category,
+        'page_obj': page_obj,
     })
 
 

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<section>
+  <div class="container-fluid intro-container d-flex align-items-center justify-content-center intro-section">
+    <div class="row w-100">
+      <div class="col-12 text-center intro-section-title">
+        <h1 class="intro-section-title-text">DATAVERSE</h1>
+        <h4 class="intro-section-title-subtitle">Connecting People through Data</h4>
+        <button class="intro-section-button mt-3"><a href="{% url 'category' %}">Explore Insights</a></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
