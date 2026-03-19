@@ -26,23 +26,25 @@ def glossary(request):
 def index(request):
     obj = Article.objects.all().order_by('-is_featured', '-published_date')    
     paginator = Paginator(obj, 5)
+    categories = Category.objects.all() 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, "dataverse/index.html", {
         'obj': obj,
         'page_obj' : page_obj,
+        'categories': categories
     })
 
 
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug=slug)
-    articles_list = Article.objects.filter(category=category).order_by('-published_at')
+    articles_list = Article.objects.filter(category=category).order_by('-published_date')
     
     paginator = Paginator(articles_list, 5)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     
-    return render(request, "category_detail.html", {
+    return render(request, "dataverse/category_detail.html", {
         'category': category,
         'page_obj': page_obj,
     })

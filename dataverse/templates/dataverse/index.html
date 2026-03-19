@@ -11,20 +11,18 @@
 
 <section>
   <nav class="navbar navbar-category py-3">
-  <div class="container-fluid justify-content-center">
-    <ul class="navbar-nav flex-column flex-lg-row gap-5">
-      <li class="nav-item text-center">
-        <a class="nav-link-category" href="#">Data University</a>
-      </li>
-      <li class="nav-item text-center">
-        <a class="nav-link-category" href="#">Data Lab</a>
-      </li>
-      <li class="nav-item text-center">
-        <a class="nav-link-category" href="#">Data for Business</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div class="container-fluid justify-content-center">
+      <ul class="navbar-nav flex-column flex-lg-row gap-5">
+  {% for cat in categories %}
+    <li class="nav-item text-center">
+      <a class="nav-link-category" href="{% url 'category_detail' cat.slug %}">
+        {{ cat.name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+    </div>
+  </nav>
 </section>
 
 <section class="content-section lead">
