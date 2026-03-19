@@ -34,34 +34,37 @@ html {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #5c6bff;
+    color: var(--white-color);
     font-weight: bold;
 }
 
 .navbar-light .navbar-nav .home-link {
-    color: #5c6bff;
+    color: var(--white-color);
     font-weight: bold;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #5c6bff;
+    color: var(--violet-color);
     font-weight: bold;
+    transition: 0.5s ease;
+
 }
 .navbar-light .navbar-nav .home-link:hover {
-    color: #5c6bff;
+    color: var(--violet-color);
     font-weight: bold;
+    transition: 0.5s ease;
+
 }
 
 .home-link {
     text-decoration: none;
-    color: #5c6bff;
-    font-weight: normal;
+    color: var(--white-color);
 }
 
 .home-link:hover {
     text-decoration: none;
     color: #5c6bff;
-    font-weight: normal;
+    transition: 0.5s ease;
 }
 
 .hero-section {
@@ -77,24 +80,44 @@ html {
 }
 
 .about-hero-title {
+    color: var(--white-color);
+    font-family: 'Orbit',sans-serif;
+}
+
+.post-section-title {
+    color: var(--dark-color);
+    font-family: 'Montserrat','sans-serif';
+}
+
+.mid-divider {
+    background-color: #dedede;
+    width: 20%;
+    height: 1px;
+    margin: 16px auto;
+    display: block;
+}
+
+.about-hero-title-page {
     color: var(--violet-color);
+    font-family: 'Orbit',sans-serif;
 }
 
 .about-hero-slogan {
-    color: var(--white-color);
+    color: var(--violet-color);
     font-weight: bold;
+    font-family: 'Montserrat',sans-serif;
 }
 
 .hero-title {
     color: #5c6bff;
-        font-family: 'Orbit',sans-serif;
+    font-family: 'Orbit',sans-serif;
     font-weight: normal;
     font-size: 10rem;
 }
 
 .hero-lead {
     color: #0c0116;
-    font-family: 'Orbit',sans-serif;
+    font-family: 'Montserrat',sans-serif;
     font-weight: bold;
     margin-top: -30px;
     letter-spacing: 10px;
@@ -111,15 +134,22 @@ html {
 
 
 .content-section {
-    font-family: 'Orbit',sans-serif;
-    width: 100%;
-    height: 50vh;
+    font-family: 'Montserrat',sans-serif;
+    width: 75%;
+    height: 30vh;
     display: flex;
     flex-direction: column;
+    background-color: #f8f9fa;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        width: 90%;
+        height: auto;
+    }
 }
 
 .dv-content {
@@ -130,9 +160,8 @@ html {
 
 .dv-content-intro {
     font-family: 'Orbit',sans-serif;
-    color: #0c0116;
+    color: var(--violet-color);
     font-weight: bold;
-    letter-spacing: 5px;
 }
 
 .cards-section {
@@ -209,7 +238,7 @@ html {
     position: relative;
     width: 100%;
     height: 85vh; 
-    background-image: url('https://r4.wallpaperflare.com/wallpaper/853/586/450/universe-abstract-cube-gradient-wallpaper-6920483dc13a7d2b3657880f4071d63d.jpg');
+    background-color: var(--dark-color);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -221,7 +250,7 @@ html {
 
 
 .quote-content {
-    font-family: 'Orbit',sans-serif;
+    font-family: 'Montserrat',sans-serif;
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -236,13 +265,14 @@ html {
 .author {
     font-size: 1.2rem;
     font-style: italic;
-    color: #f8f9fa;
+    color: var(--violet-color);
     font-family: 'Orbit',sans-serif;
 }
 
 .quote-text {
-    font-family: 'Orbit',sans-serif;
-    font-weight: 600;
+    font-family: 'Montserrat',sans-serif;
+    color: var(--white-color);
+    
 
 }
 
@@ -257,7 +287,7 @@ html {
     font-weight: bold;
     margin-bottom: 30px;
     font-family: 'Orbit',sans-serif;
-    color: #0c0116;
+    color: var(--violet-color);
 
 }
 
@@ -275,14 +305,14 @@ html {
     font-size: 1.4rem;
     font-weight: bold;
     margin-top: 10px;
-    font-family: 'Orbit',sans-serif;
+    font-family: 'Montserrat',sans-serif;
 }
 
 .article-title a {
     text-decoration: none;
     color: #5c6bff;
     transition: color 0.3s ease;
-    font-family: 'Orbit',sans-serif;
+    font-family: 'Montserrat',sans-serif;
 
 }
 
@@ -476,11 +506,11 @@ html {
 /* About Text */
 .about-text {
     color: #0c0116;
-    font-family: 'Orbit',sans-serif;
+    font-family: 'Montserrat',sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
     max-width: 800px;
-    margin: 0 auto; /* Centers text */
+    margin: 0 auto; 
 }
 
 .about-subtitle {
@@ -675,6 +705,7 @@ h2 {
     text-decoration: none;
     display: inline-block;
     color: var(--dark-color);
+    font-family: 'Orbit',sans-serif;
 }
 
 .nav-link-category:hover {
@@ -695,6 +726,23 @@ h2 {
 
 .image-about {
     max-width: 50%;
+}
+
+.button-insight {
+    text-decoration: none;
+    background-color: #0c0116;
+    color: var(--white-color);
+    font-family: 'Orbit',sans-serif;
+}
+
+.button-insight:hover {
+    color: var(--violet-color);
+    transition: ease 0.5s;
+}
+
+.button-global-insight {
+    background-color: var(--dark-color);
+    border: none;
 }
 
 
