@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat,Orbit/Montserrat/static/Montserrat-Regular.ttf)
+}
 
+@font-face {
+  font-family: Orbit;
+  src: url(../fonts/Montserrat,Orbit/Orbit/Orbit-Regular.ttf)
+}
 body {
     background-color: #f8f9fa;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 :root {
     --dark-color : #0c0116;
@@ -12,7 +23,7 @@ body {
 }
 
 .HeaderBanner {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     background-color: #0c0116;
 }
 
@@ -55,26 +66,35 @@ body {
 
 .hero-section {
     margin-top: 50px;
-    height: 30vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f8f9fa;
+    background-color: var(--dark-color);
 
+}
+
+.about-hero-title {
+    color: var(--violet-color);
+}
+
+.about-hero-slogan {
+    color: var(--white-color);
+    font-weight: bold;
 }
 
 .hero-title {
     color: #5c6bff;
-    font-family: 'Poppins',sans-serif;
+        font-family: 'Orbit',sans-serif;
     font-weight: normal;
     font-size: 10rem;
 }
 
 .hero-lead {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     font-weight: bold;
     margin-top: -30px;
     letter-spacing: 10px;
@@ -83,7 +103,7 @@ body {
 
 .hero-slogan {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     font-weight: normal;
     font-style: italic;
     margin-top: -20px;
@@ -91,7 +111,7 @@ body {
 
 
 .content-section {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     width: 100%;
     height: 50vh;
     display: flex;
@@ -103,13 +123,13 @@ body {
 }
 
 .dv-content {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #5c6bff;
     font-weight: bold;
 }
 
 .dv-content-intro {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #0c0116;
     font-weight: bold;
     letter-spacing: 5px;
@@ -145,20 +165,20 @@ body {
     opacity: 0.7;
 }
 .card button {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #f8f9fa;
     margin-top: 25px;
     background-color: #5c6bff;
 }
 
 .TitleCard {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #0c0116;
     font-size: 20px;
 }
 
 .TitleCard_DR {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #0c0116;
     font-size: 15px;
 }
@@ -167,19 +187,19 @@ body {
 
 .CardTitle {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
 
 .subtext-card {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #0c0116;
     font-size: 1.025rem;
 }
 
 .subtext-card_DR {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #0c0116;
     font-size: 0.90rem;
 }
@@ -201,7 +221,7 @@ body {
 
 
 .quote-content {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -217,11 +237,11 @@ body {
     font-size: 1.2rem;
     font-style: italic;
     color: #f8f9fa;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 }
 
 .quote-text {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     font-weight: 600;
 
 }
@@ -236,7 +256,7 @@ body {
 .articles-title {
     font-weight: bold;
     margin-bottom: 30px;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #0c0116;
 
 }
@@ -255,14 +275,14 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     margin-top: 10px;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 }
 
 .article-title a {
     text-decoration: none;
     color: #5c6bff;
     transition: color 0.3s ease;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
@@ -283,7 +303,7 @@ body {
     font-weight: 600;
     background-color: #f0f0f0;
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     border-radius: 20px;
 }
 
@@ -295,7 +315,7 @@ body {
     color: #f8F9FA;
     padding: 40px 0;
     text-align: center;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
@@ -311,7 +331,7 @@ body {
     font-size: 1rem;
     margin-top: 10px;
     color: #f8f9fa;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
@@ -333,13 +353,13 @@ body {
     color: #f8f9fa;
     text-decoration: none;
     transition: 0.3s;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
 .footer-links ul li a:hover {
     color: #5c6bff;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
@@ -364,7 +384,7 @@ body {
     color: #f8f9fa;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
@@ -377,7 +397,7 @@ body {
     margin-top: 20px;
     font-size: 0.9rem;
     color: #bbb;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
@@ -446,7 +466,7 @@ body {
 /* Centered Title */
 .about-title {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
@@ -456,7 +476,7 @@ body {
 /* About Text */
 .about-text {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
     max-width: 800px;
@@ -465,7 +485,7 @@ body {
 
 .about-subtitle {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     font-size: 2.1rem;
     line-height: 1.6;
     max-width: 800px;
@@ -493,7 +513,7 @@ body {
 }
 
 .btn-about {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #f8f9fa;
     margin-top: 25px;
     background-color: #5c6bff;
@@ -520,7 +540,7 @@ h2 {
 }
 
 .task-title {
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Orbit',sans-serif;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -546,7 +566,7 @@ h2 {
 
 .step-links a,
 .step-links .current {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     text-decoration: none;
     padding: 10px 14px;
     border-radius: 6px;
@@ -556,21 +576,21 @@ h2 {
 }
 
 .step-links a {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     background-color: #f1f1f1;
     color: #0c0116;
 }
 
 .step-links a:hover {
     background-color: #5c6bff;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     color: #f8f9fa;
 
 }
 
 .step-links .current {
 
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     background-color: #f1f1f1;
     color: #5c6bff;
 }
@@ -591,7 +611,7 @@ h2 {
 .alphabet-nav a {
     text-decoration: none;
     padding: 10px 15px;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     background-color: #f1f1f1;
     color: #0c0116;
     font-weight: 600;
@@ -605,7 +625,7 @@ h2 {
 }
 .glossary-item {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     padding: 15px;
     background: #f4f4f4;
     border-radius: 8px;
@@ -613,13 +633,13 @@ h2 {
 
 .letter-item {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
 
 }
 
 .article-meta {
     color: #0c0116;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     display: flex;
     justify-content: center;
     gap: 15px; /* Adjust spacing between items */
@@ -628,7 +648,7 @@ h2 {
 
 .started-button-left {
     color: #f8f9fa;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     background-color: #6A4267;
 }
 
@@ -642,7 +662,7 @@ h2 {
 
 .started-button-right {
     color: #f8f9fa;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Orbit',sans-serif;
     background-color: #2C2750;
 }
 
@@ -671,6 +691,10 @@ h2 {
 .about-hero {
     background-color: var(--dark-color);
 
+}
+
+.image-about {
+    max-width: 50%;
 }
 
 

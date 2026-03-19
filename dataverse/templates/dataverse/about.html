@@ -1,4 +1,5 @@
 {% extends "dataverse/base.html" %}
+{% load static %}
 
 {% block content %}
 <section class="about-hero vh-25 d-flex align-items-center justify-content-center">
@@ -7,28 +8,49 @@
     </div>
 </section>
 
-<section class="about-content py-5">
-    <div class="container">
-        <h2 class="about-title">About</h2>
-        <p class="about-text mt-2">Data is everywhere—it's embedded in every interaction, transaction, and system around us. From the devices we use daily to the vast networks that connect us, data flows continuously, shaping the world we live in.</p>
-        <p class="about-text mt-2">In today’s interconnected ecosystems, the level of data we generate and encounter is <span class="dv-content">unprecedented</span>.</p>
-        <p class="about-text mt-2">
-            We’re surrounded by structured and unstructured data, from social media and business operations to healthcare, environmental systems, and beyond. Understanding how to manage, interpret, and leverage this data has become crucial, as it holds the potential to drive innovation, transform industries and <span class="dv-content">improve decision-making</span>. 
-            <p class="about-text mt-2">At <span class="dv-content">DATAVERSE</span>, I'm on on a mission to share my passion for data and provide <span class="dv-content">valuable insights</span> to help others navigate the world of data
+
+<section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-12 col-md-6 mb-4 mb-md-0 text-center">
+        <img src="{% static 'images/Profile-dataverse.png' %}" 
+             alt="About Image" 
+             class="img-fluid image-about">
+      </div>
+
+      <div class="col-12 col-md-6 text-center text-md-start">
+        <h2 class="mb-3 fw-bold">
+          About our designer
+        </h2>
+
+        <p class="lead about-text">
+          Drawing on my many years of experience working with data, I aim to support organisations in their data transformation into fully data-driven enterprises.<br>Over the last few years, data has become a strategic asset that plays a critical role in informed decision-making and sustainable growth.
+<br>AI solutions, particularly generative AI, has reshaped the digital landscape and offer employees many opportunities for them to automate daily tasks and use time wisely by focusing on performing more valuable tasks for them.
+However, even the most advanced algorithms or sophisticated solutions are ineffective without strong user adoption.
+<br>For this reason, investment must extend beyond technology alone. A strong focus on data & IA adoption is required to support people throughout their journey, if successful transformation is to be achieved.
+<br><br>This belief is at the heart of DATAVERSE, which is structured in three key components:
+<br><br>
+<ul class="about-text lead">
+    <li>Data Lab for experimenting data transformation processes.</li>
+    <li>‍Data For Business, for monitoring the latest market trends in the data and AI world.‍
+</li>
+    <li>Data University is focused on building e-resources to support skill development and adoption.
+</li>
+</ul>
+
+
         </p>
-        <p class="about-text mt-2">
-            Join us as we delve into the future of data. <span class="dv-content">Stay informed, stay ahead!</span>
-        </p>
-        <p class="about-text mt-2">
-            I’d love to hear from you! Whether you have questions, ideas, or just want to connect, feel free to reach out. You can connect with me on LinkedIn or send me an email directly. Let’s continue the conversation and explore the fascinating world of data together!        </p>
-    </div>
-    <div class="text-center">
-        <a href="{% url 'index'%}" class="btn btn-about">Learn More</a>
+
+                <a href="{% url 'index'%}" class="btn btn-about">Learn More</a>
+
+      </div>
 
     </div>
+  </div>
 </section>
 
 
 
 
-{% endblock %}
+{% endblock content %}
