@@ -19,38 +19,8 @@
 <section class="articles-section">
     <h2 class="articles-title display-4">Insights</h2>
 
-    <!-- Featured Section Header -->
-    <div class="row justify-content-center mb-4">
-        <div class="col-12 col-md-6 text-center">
-            <h2 class="post-section-title">Featured Posts</h2>
-            <div class="mid-divider mx-auto"></div>
-        </div>
-    </div>
-
-    <!-- Featured Articles -->
-    <ul class="articles-list">
-        {% for article in page_obj %}
-            {% if article.is_featured %}
-                <li class="article-item">
-                    <div class="article-title">
-                        <a href="{% url 'article_detail' article.slug %}">
-                            {{ article.title }}
-                            
-                        </a>
-                    </div>
-                    <span class="article-category">{{ article.category }}</span>
-                </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-
-    <!-- All Articles -->
-    <div class="row justify-content-center mt-5 mb-4">
-        <div class="col-12 col-md-6 text-center">
-            <h2 class="post-section-title">Recents Posts</h2>
-            <div class="mid-divider mx-auto"></div>
-        </div>
-    </div>
+    
+    
 
     <ul class="articles-list">
         {% for article in page_obj %}
