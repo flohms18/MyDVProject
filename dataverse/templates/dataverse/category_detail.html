@@ -16,4 +16,81 @@
   </div>
 </section>
 
+<section class="articles-section">
+    <h2 class="articles-title display-4">Insights</h2>
+
+    <!-- Featured Section Header -->
+    <div class="row justify-content-center mb-4">
+        <div class="col-12 col-md-6 text-center">
+            <h2 class="post-section-title">Featured Posts</h2>
+            <div class="mid-divider mx-auto"></div>
+        </div>
+    </div>
+
+    <!-- Featured Articles -->
+    <ul class="articles-list">
+        {% for article in page_obj %}
+            {% if article.is_featured %}
+                <li class="article-item">
+                    <div class="article-title">
+                        <a href="{% url 'article_detail' article.slug %}">
+                            {{ article.title }}
+                            
+                        </a>
+                    </div>
+                    <span class="article-category">{{ article.category }}</span>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <!-- All Articles -->
+    <div class="row justify-content-center mt-5 mb-4">
+        <div class="col-12 col-md-6 text-center">
+            <h2 class="post-section-title">Recents Posts</h2>
+            <div class="mid-divider mx-auto"></div>
+        </div>
+    </div>
+
+    <ul class="articles-list">
+        {% for article in page_obj %}
+            {% if not article.is_featured %}
+                <li class="article-item">
+                    <div class="article-meta">
+                        Published: {{ article.published_date }}
+                    </div>
+                    <div class="article-title">
+                        <a href="{% url 'article_detail' article.slug %}">
+                            {{ article.title }}
+                        </a>
+                    </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">First</a>
+                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+    
+            {% for num in page_obj.paginator.page_range %}
+                {% if num == page_obj.number %}
+                    <span class="current">{{ num }}</span>
+                {% else %}
+                    <a href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+        </span>
+    </div>
+</section>
+
 {% endblock content %}
