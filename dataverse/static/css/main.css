@@ -530,8 +530,8 @@ html {
     height: auto; /* Keeps the aspect ratio intact */
 }
 
-figure {
-    max-width: 800px;
+p img {
+    display: block;
 }
 
 
