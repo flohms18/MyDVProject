@@ -534,6 +534,8 @@ p img {
     display: block !important
 }
 
+img {display: block !important;}
+
 
 
 /* Responsive Adjustments */
