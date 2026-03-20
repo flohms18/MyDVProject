@@ -530,6 +530,11 @@ html {
     height: auto; /* Keeps the aspect ratio intact */
 }
 
+figure {
+    max-width: 800px;
+}
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
