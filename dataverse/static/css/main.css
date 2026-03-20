@@ -526,8 +526,9 @@ html {
 
 .img-governance {
     max-width: 800px; /* Limits the image width to match the max width of text */
-    width: 100%; /* Ensures responsiveness by scaling down the image */
+    width: 80%; /* Ensures responsiveness by scaling down the image */
     height: auto; /* Keeps the aspect ratio intact */
+    margin: auto;
 }
 
 p img {
