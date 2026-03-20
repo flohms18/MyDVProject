@@ -531,7 +531,7 @@ html {
 }
 
 p img {
-    display: block;
+    display: block !important
 }
 
 
