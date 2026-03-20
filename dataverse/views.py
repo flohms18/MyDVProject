@@ -24,15 +24,19 @@ def glossary(request):
         'glossary_dict': glossary_dict})
 
 def index(request):
-    obj = Article.objects.all().order_by('-is_featured', '-published_date')    
-    paginator = Paginator(obj, 5)
-    categories = Category.objects.all() 
+    featured_articles = Article.objects.filter(is_featured=True).order_by('-published_date')
+    recent_articles = Article.objects.filter(is_featured=False).order_by('-published_date')
+
+    paginator = Paginator(recent_articles, 5)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
+
+    categories = Category.objects.all()
+
     return render(request, "dataverse/index.html", {
-        'obj': obj,
-        'page_obj' : page_obj,
-        'categories': categories
+        'featured_articles': featured_articles,
+        'page_obj': page_obj,
+        'categories': categories,
     })
 
 

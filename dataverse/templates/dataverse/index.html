@@ -61,44 +61,44 @@
 
     <!-- Featured Articles -->
     <ul class="articles-list">
-        {% for article in page_obj %}
-            {% if article.is_featured %}
-                <li class="article-item">
-                    <div class="article-title">
-                        <a href="{% url 'article_detail' article.slug %}">
-                            {{ article.title }}
-                            
-                        </a>
-                    </div>
-                    <span class="article-category">{{ article.category }}</span>
-                </li>
-            {% endif %}
+        {% for article in featured_articles %}
+            <li class="article-item">
+                <div class="article-title">
+                    <a href="{% url 'article_detail' article.slug %}">
+                        {{ article.title }}
+                    </a>
+                </div>
+                <span class="article-category">{{ article.category }}</span>
+            </li>
+        {% empty %}
+            <li class="article-item">No featured posts available.</li>
         {% endfor %}
     </ul>
 
-    <!-- All Articles -->
+    <!-- Recent Posts Header -->
     <div class="row justify-content-center mt-5 mb-4">
         <div class="col-12 col-md-6 text-center">
-            <h2 class="post-section-title">Recents Posts</h2>
+            <h2 class="post-section-title">Recent Posts</h2>
             <div class="mid-divider mx-auto"></div>
         </div>
     </div>
 
+    <!-- Recent Articles -->
     <ul class="articles-list">
         {% for article in page_obj %}
-            {% if not article.is_featured %}
-                <li class="article-item">
-                    <div class="article-meta">
-                        Published: {{ article.published_date }}
-                    </div>
-                    <div class="article-title">
-                        <a href="{% url 'article_detail' article.slug %}">
-                            {{ article.title }}
-                        </a>
-                    </div>
-                    <span class="article-category">{{ article.category }}</span>
-                </li>
-            {% endif %}
+            <li class="article-item">
+                <div class="article-meta">
+                    Published: {{ article.published_date }}
+                </div>
+                <div class="article-title">
+                    <a href="{% url 'article_detail' article.slug %}">
+                        {{ article.title }}
+                    </a>
+                </div>
+                <span class="article-category">{{ article.category }}</span>
+            </li>
+        {% empty %}
+            <li class="article-item">No recent posts available.</li>
         {% endfor %}
     </ul>
 
@@ -109,7 +109,7 @@
                 <a href="?page=1">First</a>
                 <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
             {% endif %}
-    
+
             {% for num in page_obj.paginator.page_range %}
                 {% if num == page_obj.number %}
                     <span class="current">{{ num }}</span>
@@ -117,7 +117,7 @@
                     <a href="?page={{ num }}">{{ num }}</a>
                 {% endif %}
             {% endfor %}
-    
+
             {% if page_obj.has_next %}
                 <a href="?page={{ page_obj.next_page_number }}">Next</a>
                 <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
