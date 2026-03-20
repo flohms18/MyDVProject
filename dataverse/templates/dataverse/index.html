@@ -63,6 +63,9 @@
     <ul class="articles-list">
         {% for article in featured_articles %}
             <li class="article-item">
+                <div class="article-meta">
+                    Published: {{ article.published_date }}
+                </div>
                 <div class="article-title">
                     <a href="{% url 'article_detail' article.slug %}">
                         {{ article.title }}
