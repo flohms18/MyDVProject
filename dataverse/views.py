@@ -27,7 +27,7 @@ def index(request):
     featured_articles = Article.objects.filter(is_featured=True).order_by('-published_date')
     recent_articles = Article.objects.filter(is_featured=False).order_by('-published_date')
 
-    paginator = Paginator(recent_articles, 5)
+    paginator = Paginator(recent_articles, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
