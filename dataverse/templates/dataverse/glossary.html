@@ -2,31 +2,52 @@
 
 {% block content %}
 
-<div class="container text-center py-4">
-    <h1 class="mb-4 about-title">Glossary</h1>
+<section class="about-hero vh-25 d-flex align-items-center justify-content-center">
+    <div class="container text-center">
+        <h1 class="about-hero-title-page display-4 fw-bold reveal-bottom">Glossary</h1>
+    </div>
+</section>
 
-
-    <div class="alphabet-nav d-flex flex-wrap justify-content-center gap-2 mb-4 mt-3">
+<div class="container py-4">
+    <div class="alphabet-nav d-flex flex-wrap justify-content-center gap-2 mb-5 reveal-bottom" style="transition-delay:0.1s;">
         {% for letter in glossary_dict.keys %}
-            <a href="#{{ letter }}" class="btn">{{ letter }}</a>
+            <a href="#{{ letter }}" class="alphabet-btn">{{ letter }}</a>
         {% endfor %}
     </div>
 </div>
 
-<div class="container mb-4">
+<div class="container glossary-container mb-5">
     {% for letter, terms in glossary_dict.items %}
-        <h2 id="{{ letter }}" class="letter-item mt-4">{{ letter }}</h2>
-        <div class="row g-3">
-            {% for term in terms %}
-                <div class="col-md-4">
-                    <div class="glossary-item">
-                        <strong>{{ term.term }}</strong><br>
-                        <span>{{ term.definition }}</span>
+        <div class="glossary-letter-block reveal-bottom">
+            <h2 id="{{ letter }}" class="letter-item">{{ letter }}</h2>
+            <div class="row g-3">
+                {% for term in terms %}
+                    <div class="col-md-4">
+                        <div class="glossary-item">
+                            <strong class="glossary-term">{{ term.term }}</strong>
+                            <p class="glossary-definition">{{ term.definition }}</p>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     {% endfor %}
 </div>
+
+<script>
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-bottom').forEach((el, i) => {
+        el.style.transitionDelay = el.style.transitionDelay || (i * 60) + 'ms';
+        revealObserver.observe(el);
+    });
+</script>
 
 {% endblock %}

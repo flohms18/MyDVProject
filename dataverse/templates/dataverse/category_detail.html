@@ -7,7 +7,7 @@
 
 <section class="about-hero vh-25 d-flex align-items-center justify-content-center">
     <div class="container text-center">
-        <h1 class="about-hero-title-page display-4 fw-bold">{{ category.name }}</h1>
+        <h1 class="about-hero-title-page display-4 fw-bold reveal-bottom">{{ category.name }}</h1>
     </div>
 </section>
 
@@ -19,7 +19,7 @@
     <ul class="articles-list">
         {% for article in page_obj %}
             {% if not article.is_featured %}
-                <li class="article-item">
+                <li class="article-item reveal-bottom">
                     <div class="article-meta">
                         Published: {{ article.published_date }}
                     </div>
@@ -56,5 +56,21 @@
         </span>
     </div>
 </section>
+
+<script>
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal-bottom').forEach((el, i) => {
+        el.style.transitionDelay = el.style.transitionDelay || (i * 80) + 'ms';
+        revealObserver.observe(el);
+    });
+</script>
 
 {% endblock content %}

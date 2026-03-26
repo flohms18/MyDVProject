@@ -4,7 +4,7 @@
 {% block content %}
 <section class="about-hero vh-25 d-flex align-items-center justify-content-center">
     <div class="container text-center">
-        <h1 class="about-hero-title-page display-4 fw-bold">Inside the Code</h1>
+        <h1 class="about-hero-title-page display-4 fw-bold reveal-bottom">Inside the Code</h1>
     </div>
 </section>
 
@@ -13,18 +13,18 @@
   <div class="container">
     <div class="row align-items-center">
       
-      <div class="col-12 col-md-6 mb-4 mb-md-0 text-center">
-        <img src="{% static 'images/Profile-dataverse.png' %}" 
-             alt="About Image" 
+      <div class="col-12 col-md-6 mb-4 mb-md-0 text-center reveal-bottom">
+        <img src="{% static 'images/Profile-dataverse.png' %}"
+             alt="About Image"
              class="img-fluid image-about">
       </div>
 
       <div class="col-12 col-md-6 text-center text-md-start">
-        <h2 class="mb-3 fw-bold text-center">
+        <h2 class="mb-3 fw-bold text-center reveal-bottom" style="transition-delay: 0.1s;">
           About our designer
         </h2>
 
-        <p class="lead about-text">
+        <p class="lead about-text reveal-bottom" style="transition-delay: 0.2s;">
           Drawing on my many years of experience working with data, I aim to support organisations in their data transformation into fully data-driven enterprises.<br>Over the last few years, data has become a strategic asset that plays a critical role in informed decision-making and sustainable growth.
 <br>AI solutions, particularly generative AI, has reshaped the digital landscape and offer employees many opportunities for them to automate daily tasks and use time wisely by focusing on performing more valuable tasks for them.
 However, even the most advanced algorithms or sophisticated solutions are ineffective without strong user adoption.
@@ -42,7 +42,9 @@ However, even the most advanced algorithms or sophisticated solutions are ineffe
 
         </p>
 
-                <a href="{% url 'index'%}" class="btn btn-about">Learn More</a>
+                <div class="text-center">
+                    <a href="{% url 'index'%}" class="btn btn-about reveal-bottom" style="transition-delay: 0.3s;">Learn More</a>
+                </div>
 
       </div>
 
@@ -52,5 +54,21 @@ However, even the most advanced algorithms or sophisticated solutions are ineffe
 
 
 
+
+<script>
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal-bottom').forEach((el, i) => {
+        el.style.transitionDelay = el.style.transitionDelay || (i * 80) + 'ms';
+        revealObserver.observe(el);
+    });
+</script>
 
 {% endblock content %}
