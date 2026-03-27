@@ -998,10 +998,32 @@ h2 {
 .split-side-link {
     text-decoration: none;
     color: inherit;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .split-side-link:hover {
     transform: scale(1.02);
+    border-color: var(--violet-color);
+}
+
+.split-cta {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 20px;
+    font-family: 'Space_Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    border: 2px solid var(--dark-color);
+    border-radius: 20px;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.split-side-link:hover .split-cta {
+    background-color: var(--violet-color);
+    color: var(--white-color);
+    border-color: var(--violet-color);
 }
 
 .reveal-bottom {
