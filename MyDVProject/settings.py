@@ -26,7 +26,7 @@ ROOT_URLCONF = 'MyDVProject.urls'
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')# SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['aimind-ft.com','www.aimind-ft.com']
+ALLOWED_HOSTS = ['aimind-ft.com','www.aimind-ft.com','*']
 DEBUG = os.getenv('DEBUG', 'True') == 'False'
 SECRET_KEY = os.getenv('SECRET_KEY')
 DB_NAME = os.getenv('DB_NAME')
