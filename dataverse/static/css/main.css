@@ -666,8 +666,7 @@ html {
 .about-text {
     color: #0c0116;
     font-family: 'Montserrat',sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1rem;
     max-width: 800px;
     margin: 0 auto; 
 }
@@ -711,7 +710,8 @@ html {
     margin-top: 25px;
     background-color: #5c6bff;
     border: 2px solid transparent;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: btn-pulse 2.5s ease-in-out infinite;
 }
 
 .btn-about:hover {
@@ -719,10 +719,17 @@ html {
     border-color: #5c6bff;
     color: #5c6bff;
     transform: translateY(-2px);
+    animation: none;
+    box-shadow: none;
 }
 
 .btn-about:active {
     transform: translateY(0);
+}
+
+@keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(92, 107, 255, 0.5); }
+    50%       { box-shadow: 0 0 0 10px rgba(92, 107, 255, 0); }
 }
 
 .profession-card {
