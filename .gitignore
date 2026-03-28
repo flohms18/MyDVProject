@@ -164,3 +164,4 @@ cython_debug/
 #.idea/
 /productionfiles
 .DS_Store
+media/articles/thumbnails/data_modeling.png
