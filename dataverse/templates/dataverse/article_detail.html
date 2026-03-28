@@ -5,8 +5,8 @@
 {% block og_type %}article{% endblock %}
 {% block og_title %}{{ article.title }} — AI Mind{% endblock %}
 {% block og_description %}{{ article.content|striptags|truncatewords:25 }}{% endblock %}
-{% if article.thumbnail %}{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{{ article.thumbnail.url }}{% endblock %}{% endif %}
-{% if article.thumbnail %}{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{{ article.thumbnail.url }}{% endblock %}{% endif %}
+{% block og_image %}{% if article.thumbnail %}{{ request.scheme }}://{{ request.get_host }}{{ article.thumbnail.url }}{% else %}{% load static %}{% static 'images/Icon.png' %}{% endif %}{% endblock %}
+{% block twitter_image %}{% if article.thumbnail %}{{ request.scheme }}://{{ request.get_host }}{{ article.thumbnail.url }}{% else %}{% load static %}{% static 'images/Icon.png' %}{% endif %}{% endblock %}
 {% block twitter_title %}{{ article.title }} — AI Mind{% endblock %}
 {% block twitter_description %}{{ article.content|striptags|truncatewords:25 }}{% endblock %}
 
