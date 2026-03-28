@@ -1,33 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>AI Mind {% block title %}{% endblock %}</title>
   {% load bootstrap5 %}
-  {% bootstrap_css %}
-  {% bootstrap_javascript %}
   {% load static %}
   {% load bootstrap_icons %}
-<link rel="shortcut icon" type="image/png" href="{% static 'images/Icon.png' %}" >
-<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>{% block seo_title %}AI Mind — Making Data & AI accessible for all{% endblock %}</title>
+
+  <!-- Primary Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% block meta_description %}AI Mind demystifies Data & AI for everyone. Learn the foundations and decode the insights to make better decisions.{% endblock %}">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Florent Trouillet">
+  <meta name="google-site-verification" content="Ksgi14pSpbIywIWg6u_TcqE7mPKBezcfgm7IwSN44AE"/>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{% block canonical %}{{ request.build_absolute_uri }}{% endblock %}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+  <meta property="og:site_name" content="AI Mind">
+  <meta property="og:title" content="{% block og_title %}AI Mind — Making Data & AI accessible for all{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}AI Mind demystifies Data & AI for everyone. Learn the foundations and decode the insights.{% endblock %}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:image" content="{% block og_image %}{% static 'images/Icon.png' %}{% endblock %}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% block twitter_title %}AI Mind — Making Data & AI accessible for all{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}AI Mind demystifies Data & AI for everyone.{% endblock %}">
+  <meta name="twitter:image" content="{% block twitter_image %}{% static 'images/Icon.png' %}{% endblock %}">
+
+  <!-- JSON-LD Structured Data -->
+  {% block structured_data %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AI Mind",
+    "url": "{{ request.scheme }}://{{ request.get_host }}",
+    "description": "AI Mind demystifies Data & AI for everyone.",
+    "author": {
+      "@type": "Person",
+      "name": "Florent Trouillet"
+    }
+  }
+  </script>
+  {% endblock %}
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/Icon.png' %}">
+
+  <!-- Styles -->
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
 </head>
 <body>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light HeaderBanner w-100">
             <div class="container-fluid">
-                <h2 class="brand-name"><a class="home-link" href="{% url 'index' %}"><span class="fst-italic ai-span">AI</span> Mind</a></h2>                
+                <h2 class="brand-name"><a class="home-link" href="{% url 'index' %}"><span class="ai-span">AI</span> Mind</a></h2>
                 <button class="navbar-toggler james" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">                            <i>{% bs_icon 'list' color='5c6bff' size='1.5em'%}</i>                        
-                    </span>
+                    <span class="navbar-toggler-icon"><i>{% bs_icon 'list' color='#5c6bff' size='1.5em'%}</i></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">ABOUT</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'glossary'%}">GLOSSARY</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/florent-trouillet/">Add me on Linkedin!</a></li>
-
+                        <li class="nav-item"><a class="nav-link linkedin-link" href="https://www.linkedin.com/in/florent-trouillet/" target="_blank" rel="noopener">Add me on Linkedin!</a></li>
+                        <li class="nav-item"><a class="nav-link ws-link" href="https://www.linkedin.com/in/florent-trouillet/" target="_blank" rel="noopener">Join the WhatsApp Community!</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,34 +83,32 @@
     {% block content %}
     {% endblock %}
     </main>
-    
 
     <footer class="footer-section">
         <div class="container-fluid">
             <div class="row justify-content-center">
-    
                 <div class="col-md-4 footer-links text-center">
                     <h4 class="footer-subtitle fw-bold">Quick Links</h4>
                     <ul>
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'glossary'%}">Glossary</a></li>
-
+                        <li><a href="{% url 'category_detail' 'archive' %}">Archives</a></li>
                     </ul>
                 </div>
-    
                 <div class="col-md-4 footer-social text-center">
                     <h4 class="footer-subtitle fw-bold">Add me on Linkedin!</h4>
                     <div class="social-icons mt-4">
-                        <a href="https://www.linkedin.com/in/florent-trouillet/" target="_blank">
-                            <i>{% bs_icon 'linkedin' color='#5c6bff' size='1.5em'%}</i>                        
+                        <a href="https://www.linkedin.com/in/florent-trouillet/" target="_blank" rel="noopener">
+                            <i>{% bs_icon 'linkedin' color='#5c6bff' size='1.5em'%}</i>
                         </a>
                     </div>
                 </div>
             </div>
-    
-            
         </div>
     </footer>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+
+    {% bootstrap_javascript %}
     <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+</body>
+</html>

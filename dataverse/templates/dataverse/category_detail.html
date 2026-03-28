@@ -1,7 +1,10 @@
 {% extends 'dataverse/base.html' %}
 {% load static %}
 
-
+{% block seo_title %}{{ category.name }} — AI Mind{% endblock %}
+{% block meta_description %}Browse all {{ category.name }} articles on AI Mind. Explore Data & AI insights curated to help you learn and decode the essentials.{% endblock %}
+{% block og_title %}{{ category.name }} — AI Mind{% endblock %}
+{% block og_description %}Browse all {{ category.name }} articles on AI Mind.{% endblock %}
 
 {% block content %}
 

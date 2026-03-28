@@ -1,10 +1,15 @@
 {% extends "dataverse/base.html" %}
 
+{% block seo_title %}AI Mind — Making Data & AI accessible for all{% endblock %}
+{% block meta_description %}AI Mind demystifies Data & AI for everyone. Learn the foundations with our Learn track and decode insights with our Decode track.{% endblock %}
+{% block og_title %}AI Mind — Making Data & AI accessible for all{% endblock %}
+{% block og_description %}Learn the foundations of Data & AI and decode insights that drive better decisions.{% endblock %}
+
 {% block content %}
 
 <section class="about-hero vh-25 d-flex align-items-center justify-content-center">
     <div class="container text-center">
-        <h1 class="about-hero-title title-hero-italic reveal-bottom"><span class="fst-italic">AI</span> Mind</h1>
+        <h1 class="about-hero-title title-hero-italic reveal-bottom"><span class="">AI</span> Mind</h1>
         <p class="about-hero-slogan fw-bold reveal-bottom" style="transition-delay: 0.15s;">Making Data, AI accessible for all</p>
         <button class="button-global-insight reveal-bottom" style="transition-delay: 0.3s;"><a class="button-insight" href="#target_insight">Learn & Decode</a></button>
     </div>
@@ -14,14 +19,13 @@
   <nav class="navbar navbar-category py-3">
     <div class="container-fluid justify-content-center">
       <ul class="navbar-nav flex-column flex-lg-row gap-5">
-  {% for cat in categories %}
-    <li class="nav-item text-center">
-      <a class="nav-link-category" href="{% url 'category_detail' cat.slug %}">
-        {{ cat.name }}
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+        <li class="nav-item text-center">
+          <a class="nav-link-category" href="{% url 'category_detail' 'learn' %}">Learn</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link-category" href="{% url 'category_detail' 'decode' %}">Decode</a>
+        </li>
+      </ul>
     </div>
   </nav>
 </section>

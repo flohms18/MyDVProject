@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /dv-admin/
+
+Sitemap: {{ request.scheme }}://{{ request.get_host }}/sitemap.xml

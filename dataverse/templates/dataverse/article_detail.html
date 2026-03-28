@@ -1,5 +1,30 @@
 {% extends "dataverse/base.html" %}
 
+{% block seo_title %}{{ article.title }} — AI Mind{% endblock %}
+{% block meta_description %}{{ article.content|striptags|truncatewords:25 }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_title %}{{ article.title }} — AI Mind{% endblock %}
+{% block og_description %}{{ article.content|striptags|truncatewords:25 }}{% endblock %}
+{% if article.thumbnail %}{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{{ article.thumbnail.url }}{% endblock %}{% endif %}
+{% if article.thumbnail %}{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{{ article.thumbnail.url }}{% endblock %}{% endif %}
+{% block twitter_title %}{{ article.title }} — AI Mind{% endblock %}
+{% block twitter_description %}{{ article.content|striptags|truncatewords:25 }}{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ article.title }}",
+  "datePublished": "{{ article.published_date|date:'c' }}",
+  "author": {"@type": "Person", "name": "Florent Trouillet"},
+  "publisher": {"@type": "Organization", "name": "AI Mind"},
+  "description": "{{ article.content|striptags|truncatewords:25 }}"{% if article.thumbnail %},
+  "image": "{{ request.scheme }}://{{ request.get_host }}{{ article.thumbnail.url }}"{% endif %}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 
 <section class="article-hero reveal-bottom{% if article.thumbnail %} article-hero--image{% endif %}"

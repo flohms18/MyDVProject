@@ -24,8 +24,8 @@ def glossary(request):
         'glossary_dict': glossary_dict})
 
 def index(request):
-    featured_articles = Article.objects.filter(is_featured=True).order_by('-published_date')
-    recent_articles = Article.objects.filter(is_featured=False).order_by('-published_date')
+    featured_articles = Article.objects.filter(is_featured=True, category__slug__in=['learn', 'decode']).order_by('-published_date')
+    recent_articles = Article.objects.filter(is_featured=False, category__slug__in=['learn', 'decode']).order_by('-published_date')
 
     paginator = Paginator(recent_articles, 6)
     page_number = request.GET.get('page')

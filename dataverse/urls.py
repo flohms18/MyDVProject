@@ -14,8 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
 from django.urls import path, include
+from django.views.generic import TemplateView
 
 from . import views
 from dataverse.views import datarole_detail
@@ -31,9 +31,7 @@ urlpatterns = [
     path("category/<slug:slug>", views.category_detail, name="category_detail"),
     path("datarole/<slug:slug>/", datarole_detail, name="datarole_detail"),
     path("article/<slug:slug>/", article_detail, name="article_detail"),
-    path("tinymce/", include("tinymce.urls"))
-
-
-    
+    path("tinymce/", include("tinymce.urls")),
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
 ]
 

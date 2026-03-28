@@ -609,6 +609,16 @@ html {
     background: linear-gradient(to top, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0.35) 100%);
 }
 
+.navbar-light .navbar-nav .nav-link.linkedin-link,
+.navbar-light .navbar-nav .nav-link.linkedin-link:hover {
+    color: #0077b5;
+}
+
+.navbar-light .navbar-nav .nav-link.ws-link,
+.navbar-light .navbar-nav .nav-link.ws-link:hover {
+    color: #25D366;
+}
+
 .article-hero-content {
     position: relative;
     z-index: 1;
