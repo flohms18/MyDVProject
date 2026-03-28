@@ -27,7 +27,8 @@ ROOT_URLCONF = 'MyDVProject.urls'
 SECRET_KEY = os.getenv('SECRET_KEY')# SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['aimind-ft.com','www.aimind-ft.com','*']
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+CSRF_TRUSTED_ORIGINS = ['https://aimind-ft.com', 'https://www.aimind-ft.com']
+DEBUG = os.getenv('DEBUG', 'True') == 'False'
 SECRET_KEY = os.getenv('SECRET_KEY')
 DB_NAME = os.getenv('DB_NAME')
 DB_USER = os.getenv('DB_USER')
@@ -145,6 +146,7 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+os.makedirs(MEDIA_ROOT / 'articles/thumbnails', exist_ok=True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
