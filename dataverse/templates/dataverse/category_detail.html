@@ -21,18 +21,16 @@
 
     <ul class="articles-list">
         {% for article in page_obj %}
-            {% if not article.is_featured %}
-                <li class="article-item reveal-bottom">
-                    <div class="article-meta">
-                        Published: {{ article.published_date }}
-                    </div>
-                    <div class="article-title">
-                        <a href="{% url 'article_detail' article.slug %}">
-                            {{ article.title }}
-                        </a>
-                    </div>
-                </li>
-            {% endif %}
+            <li class="article-item reveal-bottom">
+                <div class="article-meta">
+                    Published: {{ article.published_date }}
+                </div>
+                <div class="article-title">
+                    <a href="{% url 'article_detail' article.slug %}">
+                        {{ article.title }}
+                    </a>
+                </div>
+            </li>
         {% endfor %}
     </ul>
 
