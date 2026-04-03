@@ -31,7 +31,7 @@
 </section>
 
 <section class="content-section lead mt-3 mx-auto">
-    <p style="font-size: 1.5rem; font-weight: bold;"><span class="dv-content-intro"><span class="fst-italic">AI </span>Mind</span> demystifies Data & AI for everyone.</p>
+    <p style="font-size: 1.5rem; font-weight: bold;"><span class="dv-content-intro"><span class="fst-italic">AI </span>Mind</span> demystifies Data & AI for everyone</p>
         </section>
 
 
@@ -144,16 +144,15 @@
 
 <script>
     const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                revealObserver.unobserve(entry.target);
-            }
+        const visible = entries.filter(e => e.isIntersecting);
+        visible.forEach((entry, i) => {
+            entry.target.style.transitionDelay = (i * 50) + 'ms';
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
         });
     }, { threshold: 0.15 });
 
-    document.querySelectorAll('.reveal-bottom').forEach((el, i) => {
-        el.style.transitionDelay = (i * 80) + 'ms';
+    document.querySelectorAll('.reveal-bottom').forEach(el => {
         revealObserver.observe(el);
     });
 </script>
