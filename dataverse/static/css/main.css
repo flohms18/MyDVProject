@@ -600,7 +600,7 @@ html {
 
 .article-hero--image {
     background-size: cover;
-    background-position: center;
+    background-position: initial;
 }
 
 .article-hero-overlay {
