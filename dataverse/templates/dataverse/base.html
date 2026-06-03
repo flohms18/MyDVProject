@@ -68,9 +68,8 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">ABOUT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'glossary'%}">GLOSSARY</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'glossary'%}">Glossaire</a></li>
                         <li class="nav-item"><a class="nav-link linkedin-link" href="https://www.linkedin.com/in/florent-trouillet/" target="_blank" rel="noopener">Add me on Linkedin!</a></li>
                     </ul>
                 </div>
@@ -87,16 +86,14 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-4 footer-links text-center">
-                    <h4 class="footer-subtitle fw-bold">Quick Links</h4>
+                    <h4 class="footer-subtitle fw-bold">Liens rapides</h4>
                     <ul>
-                        <li><a href="{% url 'index' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'glossary'%}">Glossary</a></li>
-                        <li><a href="{% url 'category_detail' 'archive' %}">Archives</a></li>
+                        <li><a href="{% url 'about' %}">À propos</a></li>
+                        <li><a href="{% url 'glossary'%}">Glossaire</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 footer-social text-center">
-                    <h4 class="footer-subtitle fw-bold">Add me on Linkedin!</h4>
+                    <h4 class="footer-subtitle fw-bold">Ajoutez moi sur Linkedin ! </h4>
                     <div class="social-icons mt-4">
                         <a href="https://www.linkedin.com/in/florent-trouillet/" target="_blank" rel="noopener">
                             <i>{% bs_icon 'linkedin' color='#5c6bff' size='1.5em'%}</i>
